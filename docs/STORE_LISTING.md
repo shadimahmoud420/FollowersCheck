@@ -1,20 +1,20 @@
-# نصوص صفحة المتجر – Follower Check
+# نصوص صفحة المتجر – Followers Check
 
 > لا تضع كلمة «Instagram» في الاسم أو العنوان الفرعي أو الكلمات المفتاحية. يُسمح بذكرها في الوصف فقط، مع عبارة إخلاء المسؤولية في آخره.
 
 ## الاسم
-- **App Store (حتى 30 حرفاً):** Follower Check: Unfollowers
+- **App Store (حتى 30 حرفاً):** Followers Check: Unfollowers
 - **Subtitle – App Store (حتى 30 حرفاً):**
   - AR: اعرف من ألغى متابعتك بأمان
   - EN: See who unfollowed you, safely
-- **Google Play (حتى 30 حرفاً):** Follower Check: Unfollow Tracker
+- **Google Play (حتى 30 حرفاً):** Followers Check: Unfollowers
 
 ## الوصف المختصر – Google Play (حتى 80 حرفاً)
 - AR: اعرف من ألغى متابعتك ومن لا يتابعك، بدون كلمة مرور وكل شيء على جهازك
 - EN: See who unfollowed you & who doesn't follow back. No password, 100% on-device
 
 ## الوصف الكامل – عربي
-Follower Check يخبرك من ألغى متابعتك، ومن لا يتابعك بالمقابل، ومن هم متابعوك الجدد، بطريقة آمنة تماماً.
+Followers Check يخبرك من ألغى متابعتك، ومن لا يتابعك بالمقابل، ومن هم متابعوك الجدد، بطريقة آمنة تماماً.
 
 🔒 بدون كلمة مرور
 • لا نطلب كلمة المرور أبداً ولا نسجّل الدخول إلى حسابك
@@ -40,10 +40,10 @@ Follower Check يخبرك من ألغى متابعتك، ومن لا يتابع�
 
 خصوصيتك أولاً: لا حسابات، ولا جمع بيانات، ولا إعلانات، ولا أدوات تتبّع.
 
-*Follower Check تطبيق مستقل، ولا يرتبط بـ Instagram أو Meta ولا يحظى برعايتهما أو اعتمادهما. Instagram علامة تجارية مملوكة لـ Instagram, LLC.*
+*Followers Check تطبيق مستقل، ولا يرتبط بـ Instagram أو Meta ولا يحظى برعايتهما أو اعتمادهما. Instagram علامة تجارية مملوكة لـ Instagram, LLC.*
 
 ## Full description – English
-Follower Check shows who unfollowed you, who doesn't follow you back, and who your new followers are, safely.
+Followers Check shows who unfollowed you, who doesn't follow you back, and who your new followers are, safely.
 
 🔒 No password, ever
 • We never ask for your password and never sign in to your account
@@ -69,7 +69,7 @@ Follower Check shows who unfollowed you, who doesn't follow you back, and who yo
 
 Private by design: no accounts, no data collection, no ads, no trackers.
 
-*Follower Check is an independent app and is not affiliated with, endorsed or sponsored by Instagram or Meta. Instagram is a trademark of Instagram, LLC.*
+*Followers Check is an independent app and is not affiliated with, endorsed or sponsored by Instagram or Meta. Instagram is a trademark of Instagram, LLC.*
 
 ## الكلمات المفتاحية – App Store (حتى 100 حرف، مفصولة بفواصل)
 - AR: متابعين,إلغاء المتابعة,من ألغى متابعتي,متابعون,تتبع,فولو,أنفولو,لا يتابعني,متابعين جدد

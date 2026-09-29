@@ -95,7 +95,7 @@ abstract class AppLocalizations {
   /// No description provided for @appTitle.
   ///
   /// In en, this message translates to:
-  /// **'Follower Check'**
+  /// **'Followers Check'**
   String get appTitle;
 
   /// No description provided for @next.
@@ -155,7 +155,7 @@ abstract class AppLocalizations {
   /// No description provided for @onboardingBody1.
   ///
   /// In en, this message translates to:
-  /// **'Follower Check compares two copies of your own Instagram data export and shows who unfollowed you, who doesn\'t follow you back and who your new followers are.'**
+  /// **'Followers Check compares two copies of your own Instagram data export and shows who unfollowed you, who doesn\'t follow you back and who your new followers are.'**
   String get onboardingBody1;
 
   /// No description provided for @onboardingTitle2.
@@ -659,13 +659,13 @@ abstract class AppLocalizations {
   /// No description provided for @disclaimer.
   ///
   /// In en, this message translates to:
-  /// **'Follower Check is an independent app. It is not affiliated with, endorsed or sponsored by Instagram or Meta.'**
+  /// **'Followers Check is an independent app. It is not affiliated with, endorsed or sponsored by Instagram or Meta.'**
   String get disclaimer;
 
   /// No description provided for @paywallTitle.
   ///
   /// In en, this message translates to:
-  /// **'Follower Check Premium'**
+  /// **'Followers Check Premium'**
   String get paywallTitle;
 
   /// No description provided for @paywallFeature1.
@@ -713,7 +713,7 @@ abstract class AppLocalizations {
   /// No description provided for @privacyBody.
   ///
   /// In en, this message translates to:
-  /// **'Follower Check works entirely on your device.\n\n• We never ask for your Instagram password and never sign in to your account.\n• We don\'t use any unofficial API and don\'t contact any server.\n• The export files you choose are read on this device only. Only usernames and dates are stored, in a local database inside the app.\n• There are no analytics, ads, or trackers.\n• Reminders are local notifications scheduled on your device.\n• You can delete all data at any time from Settings › Delete all data, or by uninstalling the app.\n\nFollower Check is an independent app and is not affiliated with Instagram or Meta.'**
+  /// **'Followers Check works entirely on your device.\n\n• We never ask for your Instagram password and never sign in to your account.\n• We don\'t use any unofficial API and don\'t contact any server.\n• The export files you choose are read on this device only. Only usernames and dates are stored, in a local database inside the app.\n• There are no analytics, ads, or trackers.\n• Reminders are local notifications scheduled on your device.\n• You can delete all data at any time from Settings › Delete all data, or by uninstalling the app.\n\nFollowers Check is an independent app and is not affiliated with Instagram or Meta.'**
   String get privacyBody;
 }
 

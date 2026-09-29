@@ -1,8 +1,8 @@
-# Privacy Policy – Follower Check
+# Privacy Policy – Followers Check
 
 _Last updated: 2026-09-29_
 
-Follower Check ("the app") is an independent app that helps you compare two
+Followers Check ("the app") is an independent app that helps you compare two
 copies of **your own** "Followers and following" data export. It is **not
 affiliated with, endorsed or sponsored by Instagram or Meta**.
 

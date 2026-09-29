@@ -1,4 +1,4 @@
-# دليل Follower Check الكامل: من التشغيل إلى النشر في المتاجر
+# دليل Followers Check الكامل: من التشغيل إلى النشر في المتاجر
 
 يغطي هذا الدليل كل الخطوات بالترتيب: الخطوات المشتركة أولاً، ثم Google Play، ثم App Store.
 
@@ -37,7 +37,7 @@ flutter run
 لتعديل تصميم الأيقونة: عدّل الألوان أو الرسم في `tool/make_icon.py`، ثم شغّل السكربت من جديد. واحرص على ألا تشبه الأيقونة شعار إنستغرام أو ألوانه.
 
 الإعدادات الأصلية المضبوطة مسبقاً:
-- **في iOS:** اسم التطبيق «Follower Check»، واللغتان العربية والإنجليزية، والوضع العمودي فقط، و iPhone فقط (فلا تُطلب لقطات iPad)، وخيار `ITSAppUsesNonExemptEncryption = NO`.
+- **في iOS:** اسم التطبيق «Followers Check»، واللغتان العربية والإنجليزية، والوضع العمودي فقط، و iPhone فقط (فلا تُطلب لقطات iPad)، وخيار `ITSAppUsesNonExemptEncryption = NO`.
 - **في Android:** بدون إذن الإنترنت، وأذونات الإشعارات (`POST_NOTIFICATIONS` و `RECEIVE_BOOT_COMPLETED`) للتذكيرات فقط، وتوقيع نسخة الإصدار من ملف `key.properties`.
 
 > **مهم:** لا يمكن تغيير معرّف التطبيق (Bundle ID / Application ID) بعد أول رفع، لذلك ثبّته قبل النشر. المعرّفات الحالية:
@@ -107,7 +107,7 @@ flutter build appbundle --release
 ```
 
 ### 4.3 Play Console
-1. **Create app**: الاسم `Follower Check: Unfollow Tracker`، واللغة الافتراضية العربية، والنوع App، والتطبيق مجاني (مع مشتريات داخلية).
+1. **Create app**: الاسم `Followers Check: Unfollowers`، واللغة الافتراضية العربية، والنوع App، والتطبيق مجاني (مع مشتريات داخلية).
 2. **App content** (محتوى التطبيق):
    - **Privacy policy**: ارفع `docs/privacy-policy.html` على رابط عام (مثل GitHub Pages، انظر القسم 6)، ثم ضع الرابط هنا.
    - **Data safety**: التطبيق **لا يجمع أي بيانات ولا يشاركها**. الملفات تُعالج على الجهاز فقط.
@@ -133,7 +133,7 @@ flutter build appbundle --release
 1. اشترك في Apple Developer Program: https://developer.apple.com/programs
 2. في **Certificates, Identifiers & Profiles** ثم **Identifiers**: أنشئ App ID بالمعرّف `com.followercheck.followerCheck`.
 3. في App Store Connect: **My Apps** ثم **+** ثم **New App**:
-   - الاسم: `Follower Check: Unfollowers`. إذا كان الاسم محجوزاً فجرّب `Follower Check – Tracker`.
+   - الاسم: `Followers Check: Unfollowers`. إذا كان الاسم محجوزاً فجرّب `Followers Check – Tracker`.
    - Primary language: Arabic، و SKU: `followercheck-001`.
 
 ### 5.2 البناء على جهاز Mac
@@ -151,12 +151,12 @@ flutter build ipa --release
 ### 5.3 بدون جهاز Mac (Codemagic)
 1. أنشئ حساباً على https://codemagic.io واربط مستودع git.
 2. في App Store Connect: **Users and Access** ثم **Integrations** ثم **App Store Connect API**، وأنشئ مفتاحاً بصلاحية App Manager، ثم نزّل ملف `.p8`.
-3. في Codemagic: **Team settings** ثم **Integrations** ثم **Developer Portal**، وأضف المفتاح باسم `FollowerCheck ASC`.
+3. في Codemagic: **Team settings** ثم **Integrations** ثم **Developer Portal**، وأضف المفتاح باسم `FollowersCheck ASC`.
 4. أنشئ مجموعة متغيرات باسم `ios_signing` تحتوي على `CERTIFICATE_PRIVATE_KEY` (مفتاح RSA خاص؛ أنشئه بالأمر `ssh-keygen -t rsa -b 2048 -m PEM -f cert_key -q -N ""` وانسخ محتوى `cert_key`).
 5. في `codemagic.yaml`: ضع قيمة `APP_STORE_APPLE_ID`، وتأكد من `BUNDLE_ID`.
 6. شغّل workflow **ios-release**، وسيصل البناء إلى TestFlight تلقائياً.
 
-ولأندرويد عبر Codemagic: ارفع ملف `.jks` في **Team → Code signing identities** باسم `followercheck_upload_key`، وأنشئ مجموعة `google_play` تحتوي على `GCLOUD_SERVICE_ACCOUNT_CREDENTIALS` (ملف JSON لحساب خدمة Play Console)، ثم شغّل workflow **android-release**.
+ولأندرويد عبر Codemagic: ارفع ملف `.jks` في **Team → Code signing identities** باسم `followerscheck_upload_key`، وأنشئ مجموعة `google_play` تحتوي على `GCLOUD_SERVICE_ACCOUNT_CREDENTIALS` (ملف JSON لحساب خدمة Play Console)، ثم شغّل workflow **android-release**.
 
 ### 5.4 صفحة التطبيق في App Store Connect
 - **App Privacy**: اختر **Data Not Collected**.
@@ -165,7 +165,7 @@ flutter build ipa --release
 - **Category**: Utilities، والفئة الثانوية Social Networking.
 - **In-App Purchases**: أرفق منتج `follower_check_premium` بأول نسخة ترسلها للمراجعة.
 - **App Review Information**: التطبيق لا يحتاج تسجيل دخول. أرفق ملفَي ZIP للتجربة (من القسم 3) واكتب ملاحظة للمراجع:
-  > Follower Check compares two data-export files that the user downloads from their own Instagram account (Settings › Accounts Center › Your information and permissions › Export your information, JSON format). The app never asks for a password, never signs in, uses no unofficial API and makes no network requests; everything is processed on-device. To test: import export_week1.zip, then export_week2.zip, and open the Results tab. The free plan allows one comparison per week; use a sandbox purchase of Premium to import twice.
+  > Followers Check compares two data-export files that the user downloads from their own Instagram account (Settings › Accounts Center › Your information and permissions › Export your information, JSON format). The app never asks for a password, never signs in, uses no unofficial API and makes no network requests; everything is processed on-device. To test: import export_week1.zip, then export_week2.zip, and open the Results tab. The free plan allows one comparison per week; use a sandbox purchase of Premium to import twice.
 - اختر البناء من TestFlight ثم **Add for Review** ثم **Submit**.
 
 ---
@@ -185,7 +185,7 @@ flutter build ipa --release
 
 | السبب | ما فعلناه |
 |---|---|
-| استخدام علامة Instagram في الاسم أو الأيقونة أو المعرّف | الاسم Follower Check، والمعرّف لا يحتوي الكلمة. لا تضع «Instagram» في الاسم أو العنوان الفرعي أو الكلمات المفتاحية. يمكن ذكرها في الوصف فقط مع عبارة إخلاء المسؤولية. |
+| استخدام علامة Instagram في الاسم أو الأيقونة أو المعرّف | الاسم Followers Check، والمعرّف لا يحتوي الكلمة. لا تضع «Instagram» في الاسم أو العنوان الفرعي أو الكلمات المفتاحية. يمكن ذكرها في الوصف فقط مع عبارة إخلاء المسؤولية. |
 | الاشتباه بجمع كلمات المرور أو استخدام API غير رسمي | التطبيق لا يطلب كلمة مرور ولا يسجّل الدخول ولا يتصل بالإنترنت أصلاً (لا يوجد إذن INTERNET). وضّح ذلك في ملاحظة المراجع. |
 | غياب سياسة الخصوصية | موجودة في `docs/privacy-policy.html`، وداخل التطبيق من الإعدادات. ارفعها وضع رابطها. |
 | الشراء خارج نظام المتجر (Guideline 3.1.1) | الشراء عبر `in_app_purchase` فقط، مع زر «استعادة المشتريات». |

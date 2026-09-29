@@ -10,7 +10,7 @@ class AppLocalizationsAr extends AppLocalizations {
   AppLocalizationsAr([String locale = 'ar']) : super(locale);
 
   @override
-  String get appTitle => 'Follower Check';
+  String get appTitle => 'Followers Check';
 
   @override
   String get next => 'التالي';
@@ -41,7 +41,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get onboardingBody1 =>
-      'يقارن Follower Check نسختين من ملف بياناتك الذي تصدّره من Instagram، ويعرض لك من ألغى متابعتك، ومن لا يتابعك بالمقابل، ومن هم متابعوك الجدد.';
+      'يقارن Followers Check نسختين من ملف بياناتك الذي تصدّره من Instagram، ويعرض لك من ألغى متابعتك، ومن لا يتابعك بالمقابل، ومن هم متابعوك الجدد.';
 
   @override
   String get onboardingTitle2 => 'صدّر بياناتك بصيغة JSON';
@@ -318,10 +318,10 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get disclaimer =>
-      'Follower Check تطبيق مستقل، ولا يرتبط بـ Instagram أو Meta ولا يحظى برعايتهما أو اعتمادهما.';
+      'Followers Check تطبيق مستقل، ولا يرتبط بـ Instagram أو Meta ولا يحظى برعايتهما أو اعتمادهما.';
 
   @override
-  String get paywallTitle => 'Follower Check Premium';
+  String get paywallTitle => 'Followers Check Premium';
 
   @override
   String get paywallFeature1 => 'مقارنات غير محدودة';
@@ -348,5 +348,5 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get privacyBody =>
-      'يعمل Follower Check بالكامل على جهازك.\n\n• لا نطلب كلمة مرور Instagram ولا نسجّل الدخول إلى حسابك أبدًا.\n• لا نستخدم أي واجهة برمجية غير رسمية ولا نتصل بأي خادم.\n• تُقرأ ملفات التصدير التي تختارها على هذا الجهاز فقط، ولا يُحفظ سوى أسماء المستخدمين والتواريخ في قاعدة بيانات محلية داخل التطبيق.\n• لا توجد أدوات تحليل أو إعلانات أو تتبّع.\n• التذكيرات إشعارات محلية تُجدول على جهازك.\n• يمكنك حذف جميع البيانات في أي وقت من الإعدادات › حذف جميع البيانات، أو بحذف التطبيق.\n\nFollower Check تطبيق مستقل ولا يرتبط بـ Instagram أو Meta.';
+      'يعمل Followers Check بالكامل على جهازك.\n\n• لا نطلب كلمة مرور Instagram ولا نسجّل الدخول إلى حسابك أبدًا.\n• لا نستخدم أي واجهة برمجية غير رسمية ولا نتصل بأي خادم.\n• تُقرأ ملفات التصدير التي تختارها على هذا الجهاز فقط، ولا يُحفظ سوى أسماء المستخدمين والتواريخ في قاعدة بيانات محلية داخل التطبيق.\n• لا توجد أدوات تحليل أو إعلانات أو تتبّع.\n• التذكيرات إشعارات محلية تُجدول على جهازك.\n• يمكنك حذف جميع البيانات في أي وقت من الإعدادات › حذف جميع البيانات، أو بحذف التطبيق.\n\nFollowers Check تطبيق مستقل ولا يرتبط بـ Instagram أو Meta.';
 }

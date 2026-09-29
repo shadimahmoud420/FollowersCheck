@@ -12,12 +12,12 @@ rejections. Copy the relevant parts into App Review notes / Play Console.
   "IG", the camera-glyph logo, or Meta brand colors/gradients). Current ids:
   - Android `applicationId`: `com.followercheck.follower_check`
   - iOS bundle id: `com.followercheck.followerCheck`
-  - Display name: `Follower Check` (placeholder)
+  - Display name: `Followers Check` (placeholder)
 - Referring to Instagram **in the description and in-app instructions** is
   nominative use and is fine, e.g. "Works with the data export you download
   from Instagram". Always add the disclaimer:
 
-  > Follower Check is an independent app and is not affiliated with,
+  > Followers Check is an independent app and is not affiliated with,
   > endorsed or sponsored by Instagram or Meta.
 
 - Do not use Instagram screenshots/UI or logos in store screenshots. Use the
@@ -35,7 +35,7 @@ rejections. Copy the relevant parts into App Review notes / Play Console.
 
 ### Suggested App Review note (Apple)
 
-> Follower Check compares two data-export files that the user downloads from
+> Followers Check compares two data-export files that the user downloads from
 > their own Instagram account (Settings › Accounts Center › Export your
 > information, JSON format). The app never requests credentials and makes no
 > network requests; everything is processed locally. To test, use the sample

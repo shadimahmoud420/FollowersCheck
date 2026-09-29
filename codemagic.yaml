@@ -1,4 +1,4 @@
-# Codemagic CI: builds & uploads Follower Check without needing a Mac.
+# Codemagic CI: builds & uploads Followers Check without needing a Mac.
 # Setup steps are in docs/RELEASE_GUIDE.md (section "بدون جهاز Mac").
 workflows:
   ios-release:
@@ -7,7 +7,7 @@ workflows:
     instance_type: mac_mini_m2
     integrations:
       # Name you gave the App Store Connect API key in Codemagic settings.
-      app_store_connect: FollowerCheck ASC
+      app_store_connect: FollowersCheck ASC
     environment:
       flutter: stable
       xcode: latest
@@ -60,7 +60,7 @@ workflows:
       flutter: stable
       # Upload keystore added in Codemagic → Team → Code signing identities.
       android_signing:
-        - followercheck_upload_key
+        - followerscheck_upload_key
       groups:
         # Holds GCLOUD_SERVICE_ACCOUNT_CREDENTIALS (Play Console service account JSON).
         - google_play
