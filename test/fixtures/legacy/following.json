@@ -1,0 +1,25 @@
+{
+  "relationships_following": [
+    {
+      "title": "",
+      "media_list_data": [],
+      "string_list_data": [
+        {"href": "https://www.instagram.com/zoe", "value": "zoe", "timestamp": 1600000200}
+      ]
+    },
+    {
+      "title": "",
+      "media_list_data": [],
+      "string_list_data": [
+        {"href": "https://www.instagram.com/xavier", "value": "Xavier", "timestamp": 1600000300}
+      ]
+    },
+    {
+      "title": "",
+      "media_list_data": [],
+      "string_list_data": [
+        {"href": "", "value": "not a valid username!", "timestamp": 1600000400}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "relationships_followers": [
+    {
+      "title": "",
+      "media_list_data": [],
+      "string_list_data": [
+        {"href": "https://www.instagram.com/zoe", "value": "zoe", "timestamp": 1600000000}
+      ]
+    },
+    {
+      "title": "",
+      "media_list_data": [],
+      "string_list_data": [
+        {"href": "https://www.instagram.com/yan", "value": "@Yan", "timestamp": 1600000100}
+      ]
+    }
+  ]
+}
