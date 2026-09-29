@@ -151,7 +151,7 @@ flutter build ipa --release
 ### 5.3 بدون جهاز Mac (Codemagic)
 1. أنشئ حساباً على https://codemagic.io واربط مستودع git.
 2. في App Store Connect: **Users and Access** ثم **Integrations** ثم **App Store Connect API**، وأنشئ مفتاحاً بصلاحية App Manager، ثم نزّل ملف `.p8`.
-3. في Codemagic: **Team settings** ثم **Integrations** ثم **Developer Portal**، وأضف المفتاح باسم `FollowersCheck ASC`.
+3. في Codemagic: **Team settings** ثم **Integrations** ثم **Developer Portal**، وأضف المفتاح باسم `StoryCraft ASC` (إن كان موجوداً من تطبيق StoryCraft فاستخدمه كما هو؛ مفتاح الفريق يعمل لكل التطبيقات).
 4. أنشئ مجموعة متغيرات باسم `ios_signing` تحتوي على `CERTIFICATE_PRIVATE_KEY` (مفتاح RSA خاص؛ أنشئه بالأمر `ssh-keygen -t rsa -b 2048 -m PEM -f cert_key -q -N ""` وانسخ محتوى `cert_key`).
 5. في `codemagic.yaml`: ضع قيمة `APP_STORE_APPLE_ID`، وتأكد من `BUNDLE_ID`.
 6. شغّل workflow **ios-release**، وسيصل البناء إلى TestFlight تلقائياً.

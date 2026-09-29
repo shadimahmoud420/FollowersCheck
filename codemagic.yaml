@@ -6,8 +6,9 @@ workflows:
     max_build_duration: 60
     instance_type: mac_mini_m2
     integrations:
-      # Name you gave the App Store Connect API key in Codemagic settings.
-      app_store_connect: FollowersCheck ASC
+      # App Store Connect API key in Codemagic settings. The same team key
+      # works for every app, so we reuse the one created for StoryCraft.
+      app_store_connect: StoryCraft ASC
     environment:
       flutter: stable
       xcode: latest
@@ -39,9 +40,16 @@ workflows:
           xcode-project use-profiles
       - name: Build IPA
         script: |
-          # First upload has no previous build: start from 0.
-          LATEST=$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APPLE_ID" 2>/dev/null || echo 0)
-          BUILD=$((${LATEST:-0} + 1))
+          # Next build number = latest TestFlight build + 1. If the lookup
+          # fails (e.g. APP_STORE_APPLE_ID not set yet, or first upload), fall
+          # back to Codemagic's own counter so numbers never repeat.
+          if LATEST=$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APPLE_ID" 2>/dev/null) \
+             && [[ "$LATEST" =~ ^[0-9]+$ ]]; then
+            BUILD=$((LATEST + 1))
+          else
+            BUILD=${PROJECT_BUILD_NUMBER:-1}
+          fi
+          echo "Build number: $BUILD"
           flutter build ipa --release \
             --build-number=$BUILD \
             --export-options-plist=/Users/builder/export_options.plist
