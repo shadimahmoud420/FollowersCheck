@@ -63,6 +63,8 @@ dev_dependencies:
   flutter_lints: ^6.0.0
   sqflite_common_ffi: ^2.4.3
   shared_preferences_platform_interface: ^2.4.2
+  flutter_launcher_icons: ^0.14.4
+  flutter_native_splash: ^2.4.8
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -106,3 +108,20 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
+# python3 tool/make_icon.py && dart run flutter_launcher_icons
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/icon.png"
+  remove_alpha_ios: true
+  adaptive_icon_background: "#4338CA"
+  adaptive_icon_foreground: "assets/icon/icon_foreground.png"
+
+# dart run flutter_native_splash:create
+flutter_native_splash:
+  color: "#4338CA"
+  image: assets/icon/icon_foreground.png
+  android_12:
+    color: "#4338CA"
+    image: assets/icon/icon_foreground.png

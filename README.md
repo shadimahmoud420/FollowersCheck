@@ -1,5 +1,34 @@
 # Follower Check
 
+تطبيق Flutter واحد يعمل على **Android و iOS** لمعرفة من ألغى متابعتك، بمقارنة نسختين من ملف بيانات «المتابِعون والمتابَعون» الذي تصدّره بنفسك من إنستغرام:
+
+- **بدون كلمة مرور:** لا يطلب كلمة المرور ولا يسجّل الدخول، ولا يستخدم أي واجهة برمجية غير رسمية.
+- **كل شيء على جهازك:** لا خادم، ولا إذن إنترنت، ولا أدوات تحليل أو تتبّع.
+- **الاستيراد:** ملف ZIP كما هو، أو ملفات JSON منفردة. يتعرف على الصيغ القديمة والجديدة، وينبّهك إذا كان الملف بصيغة HTML.
+- **ثلاث قوائم:** ألغوا متابعتك، ولا يتابعونك، ومتابعون جدد. في كل قائمة بحث وعدّاد وزر لفتح الملف الشخصي.
+- **السجل:** كل عمليات الاستيراد مع عدد المتابعين، ورسم بياني لتطورهم.
+- **تذكير:** إشعار محلي أسبوعي أو كل أسبوعين لطلب ملف جديد.
+- **اللغة:** واجهة عربية (من اليمين لليسار) هي الافتراضية، وإنجليزية، مع الوضع الليلي.
+- **Premium:** مقارنات غير محدودة، وسجل كامل، ورسوم بيانية. الخطة المجانية: مقارنة واحدة أسبوعياً.
+
+## البدء السريع
+```bash
+bash tool/setup.sh   # مرة واحدة
+flutter run
+```
+
+## خطوات النشر
+اقرأ الدليل الكامل بالعربية: [docs/RELEASE_GUIDE.md](docs/RELEASE_GUIDE.md)
+- نصوص صفحة المتجر: [docs/STORE_LISTING.md](docs/STORE_LISTING.md)
+- سياسة الخصوصية (جاهزة للرفع على GitHub Pages): [docs/privacy-policy.html](docs/privacy-policy.html)
+- صفحة الدعم: [docs/index.html](docs/index.html)
+- البناء السحابي بدون Mac: [codemagic.yaml](codemagic.yaml)
+- توقيع أندرويد: انسخ `android/key.properties.example` إلى `android/key.properties`
+
+---
+
+## English
+
 _Placeholder name._ A Flutter app (Android + iOS, Arabic & English) that shows
 who unfollowed you by comparing two copies of your own **"Followers and
 following" data export** (JSON).
@@ -10,14 +39,6 @@ following" data export** (JSON).
 - Arabic (RTL) by default, English available. Material 3, light & dark themes.
 
 See [PRIVACY.md](PRIVACY.md) and [STORE_NOTES.md](STORE_NOTES.md).
-
-## خطوات النشر
-اقرأ الدليل الكامل بالعربية: [docs/RELEASE_GUIDE.md](docs/RELEASE_GUIDE.md)
-- نصوص صفحة المتجر: [docs/STORE_LISTING.md](docs/STORE_LISTING.md)
-- سياسة الخصوصية (جاهزة للرفع على GitHub Pages): [docs/privacy-policy.html](docs/privacy-policy.html)
-- صفحة الدعم: [docs/index.html](docs/index.html)
-- البناء السحابي بدون Mac: [codemagic.yaml](codemagic.yaml)
-- توقيع أندرويد: انسخ `android/key.properties.example` إلى `android/key.properties`
 
 ## Features
 
