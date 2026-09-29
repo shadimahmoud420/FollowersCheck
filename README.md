@@ -11,6 +11,14 @@ following" data export** (JSON).
 
 See [PRIVACY.md](PRIVACY.md) and [STORE_NOTES.md](STORE_NOTES.md).
 
+## خطوات النشر
+اقرأ الدليل الكامل بالعربية: [docs/RELEASE_GUIDE.md](docs/RELEASE_GUIDE.md)
+- نصوص صفحة المتجر: [docs/STORE_LISTING.md](docs/STORE_LISTING.md)
+- سياسة الخصوصية (جاهزة للرفع على GitHub Pages): [docs/privacy-policy.html](docs/privacy-policy.html)
+- صفحة الدعم: [docs/index.html](docs/index.html)
+- البناء السحابي بدون Mac: [codemagic.yaml](codemagic.yaml)
+- توقيع أندرويد: انسخ `android/key.properties.example` إلى `android/key.properties`
+
 ## Features
 
 | Screen | What it does |
@@ -109,8 +117,9 @@ flutter test
 flutter run               # on a connected device / emulator / simulator
 ```
 
-Android release build (currently signed with debug keys – configure signing
-in `android/app/build.gradle.kts` before publishing):
+Android release build (signed with your upload key when
+`android/key.properties` exists – copy it from `android/key.properties.example`;
+otherwise debug keys are used):
 
 ```bash
 flutter build apk --release
@@ -141,7 +150,8 @@ Import `export_week1.zip`, then (with "Simulate Premium" on, or a week later)
   `RECEIVE_BOOT_COMPLETED` for reminders; core library desugaring enabled
   (required by flutter_local_notifications). `<queries>` entry for https
   links (url_launcher).
-- **iOS**: deployment target 15.0; `CFBundleLocalizations` = ar, en.
+- **iOS**: deployment target 15.0; iPhone only, portrait only;
+  `CFBundleLocalizations` = ar, en; `ITSAppUsesNonExemptEncryption` = NO.
   Reminders use local notifications only (permission requested when the user
   turns them on).
 - Reminders: neither OS supports a native "every 2 weeks" repeat, so the app

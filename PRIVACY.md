@@ -62,4 +62,4 @@ update and on this page.
 
 ## Contact
 
-Questions: `privacy@example.com` _(placeholder – replace before publishing)_.
+Questions: [Metazonpro@gmail.com](mailto:Metazonpro@gmail.com).

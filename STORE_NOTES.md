@@ -1,5 +1,8 @@
 # Store review notes (App Store & Google Play)
 
+> Step-by-step release guide in Arabic: [docs/RELEASE_GUIDE.md](docs/RELEASE_GUIDE.md).
+> Store listing texts: [docs/STORE_LISTING.md](docs/STORE_LISTING.md).
+
 These notes help the app pass review and avoid trademark / data-policy
 rejections. Copy the relevant parts into App Review notes / Play Console.
 
@@ -77,9 +80,12 @@ and attach it, or host it and put the link in the review notes.
 
 ## Before publishing checklist
 
-- [ ] Replace placeholder name/icon and contact email in `PRIVACY.md`.
-- [ ] Host the privacy policy and add its URL to both stores.
+- [ ] Replace placeholder name/icon.
+- [ ] Enable GitHub Pages on `/docs` and add the privacy policy URL
+      (`docs/privacy-policy.html`) and support URL (`docs/index.html`) to both stores.
 - [ ] Create IAP product `follower_check_premium` (non-consumable) and test
       with sandbox / license testers; add receipt verification.
-- [ ] Configure Android release signing (currently uses debug keys).
+- [ ] Create the upload keystore and `android/key.properties` (see
+      `android/key.properties.example`), or configure it in Codemagic.
+- [ ] Set `APP_STORE_APPLE_ID` in `codemagic.yaml`.
 - [ ] Screenshots in Arabic and English, light & dark.
