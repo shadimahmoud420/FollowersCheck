@@ -19,7 +19,7 @@ workflows:
       vars:
         BUNDLE_ID: com.followercheck.followerCheck
         # App Store Connect → App → General → App Information → Apple ID
-        APP_STORE_APPLE_ID: 0000000000 # TODO: replace
+        APP_STORE_APPLE_ID: 6817513531
     scripts:
       - name: Get packages
         script: flutter pub get
@@ -58,7 +58,10 @@ workflows:
     publishing:
       app_store_connect:
         auth: integration
-        submit_to_testflight: true
+        # Internal testers get every uploaded build without Beta App Review.
+        # Set to true only after filling TestFlight → Test Information, to
+        # also submit builds for external testing.
+        submit_to_testflight: false
 
   android-release:
     name: Android → Google Play (internal testing)
