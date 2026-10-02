@@ -1,0 +1,53 @@
+# Codemagic CI: يبني «بدّلها» لـ iOS ويرفعه إلى TestFlight بدون جهاز Mac.
+# يعيد استخدام مفتاح App Store Connect ومجموعة ios_signing من مشروع Followers Check.
+workflows:
+  ios-testflight:
+    name: iOS → TestFlight
+    max_build_duration: 60
+    instance_type: mac_mini_m2
+    integrations:
+      app_store_connect: StoryCraft ASC
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+      groups:
+        - ios_signing   # CERTIFICATE_PRIVATE_KEY
+      vars:
+        BUNDLE_ID: ps.badelha.app
+        # App Store Connect → التطبيق → App Information → Apple ID
+        APP_STORE_APPLE_ID: 0
+    scripts:
+      - name: Get packages
+        script: flutter pub get
+      - name: Checks
+        script: |
+          flutter analyze
+          flutter test
+      - name: Code signing
+        script: |
+          keychain initialize
+          app-store-connect fetch-signing-files "$BUNDLE_ID" \
+            --type IOS_APP_STORE \
+            --certificate-key=@env:CERTIFICATE_PRIVATE_KEY \
+            --create
+          keychain add-certificates
+          xcode-project use-profiles
+      - name: Build IPA
+        script: |
+          if LATEST=$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APPLE_ID" 2>/dev/null) \
+             && [[ "$LATEST" =~ ^[0-9]+$ ]]; then
+            BUILD=$((LATEST + 1))
+          else
+            BUILD=${PROJECT_BUILD_NUMBER:-1}
+          fi
+          echo "Build number: $BUILD"
+          flutter build ipa --release \
+            --build-number=$BUILD \
+            --export-options-plist=/Users/builder/export_options.plist
+    artifacts:
+      - build/ios/ipa/*.ipa
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: false  # للمختبرين الداخليين لا حاجة لمراجعة Apple
