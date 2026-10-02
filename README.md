@@ -95,7 +95,7 @@ flutter run \
 ```bash
 flutter build apk --release --split-per-abi --dart-define=SUPABASE_URL=... --dart-define=SUPABASE_KEY=...
 ```
-أو عبر GitHub Actions: أضف `SUPABASE_URL` و`SUPABASE_KEY` في **Settings → Secrets → Actions**، وكل push يبني APK قابلاً للتحميل من صفحة Actions.
+أو عبر GitHub Actions: كل push يبني APK قابلاً للتحميل من صفحة Actions (رابط المشروع ومفتاحه العام موجودان في `lib/core/config/env.dart`).
 
 > للنشر على Google Play تحتاج مفتاح توقيع خاص (keystore). حالياً يُوقَّع الإصدار بمفتاح التطوير، وهذا مناسب للتجربة والتوزيع المباشر فقط.
 
