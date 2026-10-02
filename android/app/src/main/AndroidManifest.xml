@@ -28,6 +28,13 @@
             <!-- روابط مشاركة الإعلانات: https://badelha.app/l/<id>
                  (يتطلب ملف assetlinks.json على الدومين — انظر README) -->
             <meta-data android:name="flutter_deeplinking_enabled" android:value="true" />
+            <!-- العودة إلى التطبيق من رابط الدخول في البريد -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="ps.badelha.app" android:host="login-callback" />
+            </intent-filter>
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />

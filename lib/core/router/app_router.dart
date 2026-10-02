@@ -29,6 +29,8 @@ final routerProvider = Provider<GoRouter>((ref) {
   return GoRouter(
     initialLocation: '/',
     refreshListenable: refresh,
+    // روابط غير معروفة (مثل رابط الدخول من البريد) → الرئيسية
+    onException: (_, _, router) => router.go('/'),
     redirect: (context, state) {
       final status = ref.read(sessionProvider).status;
       final loc = state.matchedLocation;

@@ -35,12 +35,12 @@ void main() {
 
     // بريد غير صالح لا يُرسل
     await tester.enterText(find.byType(TextField), 'not-an-email');
-    await tester.tap(find.text('أرسل رمز الدخول'));
+    await tester.tap(find.text('أرسل رابط الدخول'));
     await tester.pump();
     expect(fake.sent, isEmpty);
 
     await tester.enterText(find.byType(TextField), 'user@example.com');
-    await tester.tap(find.text('أرسل رمز الدخول'));
+    await tester.tap(find.text('أرسل رابط الدخول'));
     await tester.pumpAndSettle();
     expect(fake.sent, ['user@example.com']);
 

@@ -11,6 +11,10 @@ class Env {
     defaultValue: 'https://badelha.app',
   );
 
+  /// رابط العودة إلى التطبيق بعد الضغط على رابط الدخول في البريد.
+  /// يجب إضافته في Supabase: Authentication → URL Configuration → Redirect URLs
+  static const authRedirectUrl = 'ps.badelha.app://login-callback';
+
   static bool get isConfigured =>
       supabaseUrl.isNotEmpty && supabaseKey.isNotEmpty;
 }

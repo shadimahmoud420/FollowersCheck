@@ -42,7 +42,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
       _busy = false;
       _codeSent = ok;
     });
-    if (ok) showMessage(context, 'أرسلنا رمز الدخول إلى بريدك');
+    if (ok) showMessage(context, 'أرسلنا رسالة الدخول إلى بريدك');
   }
 
   Future<void> _verify() async {
@@ -100,6 +100,22 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
             ),
             if (_codeSent) ...[
               const SizedBox(height: 16),
+              Container(
+                padding: const EdgeInsets.all(14),
+                decoration: BoxDecoration(
+                  color: AppColors.success.withValues(alpha: 0.1),
+                  borderRadius: BorderRadius.circular(14),
+                ),
+                child: const Text(
+                  '📩 افتح بريدك على هذا الهاتف واضغط رابط الدخول، وسيفتح التطبيق تلقائياً.\n'
+                  'لم تجد الرسالة؟ تفقّد مجلد Spam.',
+                  style: TextStyle(height: 1.6),
+                ),
+              ),
+              const SizedBox(height: 16),
+              const Text('أو أدخل الرمز إن وصلك رمز من 6 أرقام:',
+                  style: TextStyle(color: AppColors.muted)),
+              const SizedBox(height: 8),
               TextField(
                 controller: _code,
                 autofocus: true,
@@ -133,7 +149,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                   ? const SizedBox(
                       width: 22, height: 22,
                       child: CircularProgressIndicator(strokeWidth: 2.5, color: Colors.white))
-                  : Text(_codeSent ? 'دخول' : 'أرسل رمز الدخول'),
+                  : Text(_codeSent ? 'دخول بالرمز' : 'أرسل رابط الدخول'),
             ),
             const SizedBox(height: 16),
             const Text(

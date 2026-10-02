@@ -14,7 +14,7 @@
 
 | الميزة | الحالة |
 |---|---|
-| الدخول برمز يُرسل إلى البريد (بدون SMS) | ✅ |
+| الدخول برابط أو رمز يُرسل إلى البريد (بدون SMS) | ✅ |
 | الملف الشخصي: الاسم، الصورة، المحافظة، المنطقة | ✅ |
 | إضافة غرض: حتى 8 صور مضغوطة، فئة، حالة، قيمة، **ماذا تريد مقابله (منظّم)**، مدة العرض | ✅ |
 | التصفح، والبحث العربي الذكي (أ/إ/آ، ة/ه، التشكيل)، والفلاتر | ✅ |
@@ -73,11 +73,9 @@ lib/
 2. نفّذ ملفات `supabase/migrations/` **بالترتيب**، إما من:
    - **SQL Editor** في لوحة Supabase (انسخ كل ملف وشغّله)، أو
    - Supabase CLI: `supabase link --project-ref <ref>` ثم `supabase db push`.
-3. **Authentication → Providers → Email**: فعّل Email.
-4. **Authentication → Email Templates → Magic Link**: أضف رمز الدخول إلى الرسالة:
-   ```
-   رمز الدخول إلى بدّلها: {{ .Token }}
-   ```
+3. **Authentication → URL Configuration → Redirect URLs**: أضف `ps.badelha.app://login-callback`
+   (رابط الدخول في البريد يفتح التطبيق مباشرة).
+4. (اختياري، يتطلب SMTP خاصاً) **Authentication → Emails → Magic link**: أضف `{{ .Token }}` إلى الرسالة ليصل رمز من 6 أرقام أيضاً.
 5. **Database → Extensions**: فعّل `pg_cron` (لانتهاء الإعلانات والعروض القديمة تلقائياً)، ثم أعد تشغيل آخر جزء من الملف `20261002000002_swap_logic.sql` (كتلة `do $$ ... $$`).
 6. لجعل حسابك مشرفاً بعد التسجيل، نفّذ في SQL Editor:
    ```sql

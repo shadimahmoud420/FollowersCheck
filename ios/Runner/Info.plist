@@ -17,6 +17,15 @@
 	<string>لإضافة صور الأغراض التي تريد تبادلها</string>
 	<key>NSCameraUsageDescription</key>
 	<string>لتصوير الأغراض التي تريد تبادلها</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>ps.badelha.app</string>
+			</array>
+		</dict>
+	</array>
 	<key>FlutterDeepLinkingEnabled</key>
 	<true/>
 	<key>CFBundleExecutable</key>
